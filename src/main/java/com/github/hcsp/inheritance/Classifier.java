@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 
 public class Classifier {
     public static void main(String[] args) {
-        List<Object> list = Arrays.asList("0", 1, 2L, "3", new Object(),new Object());
+        List<Object> list = Arrays.asList("0", 1, 2L, "3", new Object());
         List<Number> numbers = new ArrayList<>();
         List<String> strings = new ArrayList<>();
         List<Object> others = new ArrayList<>();
@@ -35,13 +35,13 @@ public class Classifier {
             List<Number> numberList,
             List<String> stringList,
             List<Object> otherList) {
-        for (Object X : list) {
-            if (X instanceof Number) {
-                numberList.add((Number) X);
-            } else if (X instanceof String) {
-                stringList.add((String) X);
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) instanceof Number) {
+                numberList.add((Number) list.get(i));
+            } else if (list.get(i) instanceof String) {
+                stringList.add((String) list.get(i));
             } else {
-                otherList.add(X);
+                otherList.add(list.get(i));
             }
         }
     }
