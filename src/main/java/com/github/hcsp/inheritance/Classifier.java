@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 
 public class Classifier {
     public static void main(String[] args) {
-        List<Object> list = Arrays.asList("0", 1, 2L, "3", new Object());
+        List<Object> list = Arrays.asList("0", 1, 2L, "3", new Object(),new Object());
         List<Number> numbers = new ArrayList<>();
         List<String> strings = new ArrayList<>();
         List<Object> others = new ArrayList<>();
@@ -40,7 +40,7 @@ public class Classifier {
                 numberList.add((Number) X);
             } else if (X instanceof String) {
                 stringList.add((String) X);
-            }else {
+            } else {
                 otherList.add(X);
             }
         }
