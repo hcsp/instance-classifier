@@ -1,11 +1,8 @@
 package com.github.hcsp.inheritance;
 
-import javafx.beans.binding.ObjectExpression;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class Classifier {
     public static void main(String[] args) {
