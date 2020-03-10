@@ -31,16 +31,5 @@ public class Classifier {
             List<Object> list,
             List<Number> numberList,
             List<String> stringList,
-            List<Object> otherList) {
-        list.forEach(item -> classify(item, numberList, stringList, otherList));
-    }
-
-    private static boolean classify(Object item,
-                                 List<Number> numberList,
-                                 List<String> stringList,
-                                 List<Object> otherList) {
-        if (item instanceof Number) return numberList.add((Number) item);
-        if (item instanceof String) return stringList.add((String) item);
-        return otherList.add(item);
-    }
+            List<Object> otherList) {}
 }
