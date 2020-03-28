@@ -32,7 +32,7 @@ public class Classifier {
             List<Number> numberList,
             List<String> stringList,
             List<Object> otherList) {
-        for (int i = 0; i <list.size() ; i++) {
+
             for (Object obj : list) {
                 if (obj instanceof Number) {
                     numberList.add((Number) obj);
@@ -42,6 +42,5 @@ public class Classifier {
                     otherList.add(obj);
                 }
             }
-        }
     }
 }
