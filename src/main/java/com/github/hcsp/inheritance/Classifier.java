@@ -1,6 +1,5 @@
 package com.github.hcsp.inheritance;
 
-import com.sun.org.apache.xpath.internal.objects.XNumber;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -32,18 +31,5 @@ public class Classifier {
             List<Object> list,
             List<Number> numberList,
             List<String> stringList,
-            List<Object> otherList) {
-        for (int a = 0; a < list.size(); a++) {
-            Object j = list.get(a);
-            if (j instanceof Number) {
-                numberList.add((Number) j);
-            }
-            else if (j instanceof String){
-                stringList.add((String) j);
-            }
-            else {
-                otherList.add(j);
-            }
-        }
-    }
+            List<Object> otherList) {}
 }
