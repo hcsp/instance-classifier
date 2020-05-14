@@ -1,7 +1,5 @@
 package com.github.hcsp.inheritance;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -38,7 +36,7 @@ public class Classifier {
         for (Object object : list) {
             if (object instanceof Number) {
                 numberList.add((Number) object);
-            }else if (object instanceof String) {
+            } else if (object instanceof String) {
                 stringList.add((String) object);
             } else {
                 otherList.add(object);
