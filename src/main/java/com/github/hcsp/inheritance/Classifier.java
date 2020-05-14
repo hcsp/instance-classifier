@@ -1,5 +1,7 @@
 package com.github.hcsp.inheritance;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,9 +29,20 @@ public class Classifier {
      * @param stringList 用于接收所有String对象的列表
      * @param otherList 用于接收其余所有类型对象的列表
      */
+
     public static void classify(
             List<Object> list,
             List<Number> numberList,
             List<String> stringList,
-            List<Object> otherList) {}
+            List<Object> otherList) {
+        for (Object object : list) {
+            if (object instanceof Number) {
+                numberList.add((Number) object);
+            }else if (object instanceof String) {
+                stringList.add((String) object);
+            } else {
+                otherList.add(object);
+            }
+        }
+    }
 }
