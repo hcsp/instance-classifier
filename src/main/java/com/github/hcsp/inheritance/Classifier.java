@@ -19,17 +19,36 @@ public class Classifier {
     }
 
     /**
-     * 给定一个包含任意对象的列表，将其按照以下方式分类： 如果对象是Number类型，将其放入numberList； 如果对象是String类型，将其放入stringList；
+     * 给定一个包含任意对象的列表，将其按照以下方式分类：
+     * 如果对象是Number类型，将其放入numberList；
+     * 如果对象是String类型，将其放入stringList；
      * 否则，将其放入otherList。
      *
-     * @param list 给定的包含任意对象的列表
+     * @param list       给定的包含任意对象的列表
      * @param numberList 用于接收所有Number对象的列表
      * @param stringList 用于接收所有String对象的列表
-     * @param otherList 用于接收其余所有类型对象的列表
+     * @param otherList  用于接收其余所有类型对象的列表
      */
     public static void classify(
             List<Object> list,
             List<Number> numberList,
             List<String> stringList,
-            List<Object> otherList) {}
+            List<Object> otherList
+    ) {
+        //循环判断List
+        for (Object obj : list) {
+            //Number类型赋值给Number
+            if (obj instanceof Number) {
+                numberList.add((Number) obj);
+            } else
+                //String类型赋值给String
+                if (obj instanceof String) {
+                    stringList.add((String) obj);
+                } else {
+                    //否则直接赋值给obj类型
+                    otherList.add(obj);
+                }
+        }
+
+    }
 }
