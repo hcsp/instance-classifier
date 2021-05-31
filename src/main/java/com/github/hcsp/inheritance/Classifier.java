@@ -31,16 +31,5 @@ public class Classifier {
             List<Object> list,
             List<Number> numberList,
             List<String> stringList,
-            List<Object> otherList) {
-        for(Object x:list){
-            if(x instanceof Number){
-                numberList.add((Number)x);
-            }else if(x instanceof String){
-                stringList.add((String)x);
-            }else{
-                otherList.add(x);
-            }
-        }
-    }
-
+            List<Object> otherList) {}
 }
