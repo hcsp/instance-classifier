@@ -35,13 +35,13 @@ public class Classifier {
         for (Object o:list
              ) {
             if(o instanceof Number){
-                numberList.add((Number) 0);
+                numberList.add((Number) o);
 
             }else if(o instanceof String){
                 stringList.add((String) o);
 
             }else{
-                otherList.add(0);
+                otherList.add(o);
             }
 
         }
