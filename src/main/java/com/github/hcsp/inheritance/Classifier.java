@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Classifier {
     public static void main(String[] args) {
-        List<Object> list = Arrays.asList("0", 1, 2L, "3", new Object());
+        List<Object> list = Arrays.asList("0", 1, 2L, "3", new Object()); //把数组转换成列表
         List<Number> numbers = new ArrayList<>();
         List<String> strings = new ArrayList<>();
         List<Object> others = new ArrayList<>();
@@ -31,5 +31,15 @@ public class Classifier {
             List<Object> list,
             List<Number> numberList,
             List<String> stringList,
-            List<Object> otherList) {}
+            List<Object> otherList) {
+        for (int i = 0; i< list.size(); i++){
+            if (list.get(i) instanceof Number) {
+                numberList.add((Number) list.get(i));
+            } else if (list.get(i) instanceof String) {
+                stringList.add((String) list.get(i));
+            } else {
+                otherList.add(list.get(i));
+            }
+        }
+    }
 }
