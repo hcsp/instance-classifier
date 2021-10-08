@@ -18,7 +18,6 @@ public class Classifier {
         System.out.println("others = " + others);
     }
 
-
     /**
      * 给定一个包含任意对象的列表，将其按照以下方式分类： 如果对象是Number类型，将其放入numberList； 如果对象是String类型，将其放入stringList；
      * 否则，将其放入otherList。
@@ -32,15 +31,5 @@ public class Classifier {
             List<Object> list,
             List<Number> numberList,
             List<String> stringList,
-            List<Object> otherList) {
-        for (Object item:list) {
-            if (item instanceof Number) {
-                numberList.add((Number) item);
-            } else if (item instanceof String) {
-                stringList.add((String) item);
-            } else {
-                otherList.add(item);
-            }
-        }
-    }
+            List<Object> otherList) {}
 }
