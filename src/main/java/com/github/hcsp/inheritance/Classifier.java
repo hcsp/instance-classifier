@@ -36,7 +36,7 @@ public class Classifier {
         for (Object element : list) {
             if (element instanceof Number) {
                 numberList.add((Number) element);
-            }else if (element instanceof String) {
+            } else if (element instanceof String) {
                 stringList.add((String) element);
             } else {
                 otherList.add(element);
